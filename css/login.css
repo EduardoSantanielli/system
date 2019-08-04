@@ -1,0 +1,143 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+		background-size: cover;
+	font-family: sans-serif;
+}
+.loginBox
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 380px; /*350 */
+	height: 450px;
+	padding: 80px 40px;
+	box-sizing: border-box;
+	background: rgba(0,0,0,.5);
+}
+.user
+{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: calc(-100px/2);
+	left: calc(50% - 50px);
+}
+h2
+{
+	margin: 0;
+	padding: 0 0 20px;
+   text-shadow: 1px 1px 2px white, 0 0 25px green, 0 0 5px yellow;
+	text-align: center;
+}
+.loginBox p
+{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color: #fff;
+}
+.loginBox input
+{
+	width: 100%;
+	margin-bottom: 20px;
+
+}
+.loginBox input[type="text"],
+.loginBox input[type="password"]
+{
+	border-color:#4682B4;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+
+}
+::placeholder
+{
+	color: rgba(255,255,255,.5);
+}
+
+
+.loginBox a
+{
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+
+.btn {
+	background-color:#4169E1;
+	border-radius: 20px;
+	display:inline-block;
+	cursor:pointer;
+	color:#fff;
+	font-family: Tahoma;
+
+	font-size:16px;
+	padding:11px 23px;
+	text-decoration:none;
+}
+.btn:hover {
+	background: #191970;
+	color: white;
+}
+.btn:active {
+	position:relative;
+	top:1px;
+}
+
+.btnL {
+	background-color:#4169E1;
+	border-radius: 20px;
+	display:inline-block;
+	cursor:pointer;
+	color:#fff;
+	font-family: Tahoma;
+
+	font-size:16px;
+	padding:11px 115px;
+	text-decoration:none;
+
+}
+.btnL:hover {
+	background: #191970;
+	color: white;
+}
+.btnL:active {
+	position:relative;
+	top:1px;
+}
+
+
+.error{
+	-webkit-boxshadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	-o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	background: red;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	color: #fff;
+	display: none;
+	font-size: 14px;
+	margin-top: -35px;
+	margin-left: 130px;
+	padding: 7px;
+	position: absolute;
+}
+.input-group-prepend{
+	background-color:transparent;
+}
+.input-group-text{
+	background-color:transparent;
+	border-color:#4682B4;
+}
+
+
