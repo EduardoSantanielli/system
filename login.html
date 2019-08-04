@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>sistema - Login</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/login.css">
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<!-- Scripts -->
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/validacao.js"></script>
+
+		<script>
+
+			$(document).ready(function(){  // aplicação em javascript para caso de algum erro nos campos de login ou senha
+				$("#logar").click(function(){
+					var nome = $("#login").val();
+					var senha = $("#senha").val(); 		// recebe os valores das variáveis
+
+					if(nome == "" ){
+						$("#mensagem1").fadeIn(); 	//fade é da biblioteca de animação do jquery, ele irá aparecer caso um dos campos esteja vazio
+						return false;
+					}else{
+						$("#mensagem1").fadeOut();
+					}
+					if(senha == ""){
+						$("#mensagem2").fadeIn();
+						return false;
+					}
+					else{
+						$("#mensagem2").fadeOut();
+						return false;
+					}
+				});
+			});
+		</script>
+	
+	</head>
+	
+	<body>
+		<div class="loginBox">
+			<img src="img/bh.png" class="user">
+			<h2>Login</h2>
+			<form>
+			
+				<div class="card-body">
+				<form>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="far fa-envelope"></i></span>
+						</div>
+						<input type="text" class="form-control" id="login" placeholder="Digite seu E-mail">
+						<div class="error" id="mensagem1">Digite seu E-mail</div>
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" id="senha" class="form-control" placeholder="••••••••••••••••••••••••••••••"">
+						<div class="error" id="mensagem2"> Digite sua senha </div>
+					</div>
+				<a href="#" id="logar" class="btnL">Login</a>
+				<hr>
+				<a id="forgot" href="#">Esqueci minha senha</a>
+
+				
+			</form>
+		</div>
+	</body>
+</html>
