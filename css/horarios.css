@@ -1,0 +1,24 @@
+table.horario th,
+table.horario td {
+    padding: 10px;
+}
+ 
+/*Alinhando os cabeçalhos à esquerda*/
+table.horario th {
+    text-align: left;
+}
+table.horario {
+    width: 70%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left:22%;
+}
+ 
+table.horario tr {
+    border: 1px solid black;
+}
+ 
+table.horario td,
+table.horario th{
+    border: 1px solid black;
+}
