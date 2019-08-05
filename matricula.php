@@ -77,12 +77,12 @@
             
             <li>
                 <a href="#">
-                   <i class="fas fa-search"></i><span>Procurar</span>
+                <i class="fas fa-search"></i><span>Inserir Aluno</span>
                 </a>
             </li>   
 
               <li>
-                 <a href="#">
+              <a href="horarios.php">
                     <i class="fas fa-clock"></i><span>Horários</span>
                 </a>
             </li>  
@@ -100,7 +100,7 @@
             </li>               
 
            <li>
-                 <a href="#">
+                 <a href="bot.php">
                     <i class="fas fa-comments"></i><span>Bot</span>
                 </a>
             </li> 

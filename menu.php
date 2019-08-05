@@ -76,13 +76,13 @@
             </li>
             
             <li>
-                <a href="#">
-                   <i class="fas fa-search"></i><span>Procurar</span>
+                <a href="inserir.php">
+                   <i class="fas fa-search"></i><span>Inserir Aluno</span>
                 </a>
             </li>   
 
               <li>
-                 <a href="#">
+              <a href="horarios.php">
                     <i class="fas fa-clock"></i><span>Horários</span>
                 </a>
             </li>  
@@ -100,8 +100,8 @@
             </li>               
 
            <li>
-                 <a href="#">
-                    <i class="fas fa-comments"></i><span>Bot</span>
+                 <a href="bot.php">
+                    <i class="fas fa-comments"></i><span>Notificações</span>
                 </a>
             </li> 
             <li>
@@ -161,9 +161,42 @@
     </div>
     <br>
         <center>
-          <h4>Gerenciamento de Usuários do Sistema</h4>
+          <h5>Gerenciamento de Usuários do Sistema</h5>
+          <hr>
         </center>
+        <div class="col-md-12">
+  <div class="row">
+    <div class="col-xs-12">
+                    <div class="small-box bg-green">
+                <div class="inner">
+                  <h3 id="number-users" style="color:white;">0</h3>
+                  <p id="newuser" style="color:white;">Todos os Usuários</p>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-user-plus"></i>
+                </div>
+      </div>
+    </div>
+    
 
+
+            <div class="col-xs-10">
+              <!-- small box -->
+              <div class="smal-box bg-yellow">
+                <div class="inner">
+                  <h3 id="number-users-admin" style="color:white;">1</h3>
+          
+                  <p style="color:white;">Administradores</p>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-crown"></i>
+                </div>
+              </div>
+            </div>
+      </div>
+  </div>
+</div>
+      </div>
     <div id="top" class="row">
     <div class="col-md-3">
         <h2>Itens</h2>
@@ -203,6 +236,23 @@
                         <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
                     </td>
                 </tr>
+                
+                <tr>
+                <td>Nada</td>
+                    <td> PEDRO</td>
+                    <td>01/01/2015</td>
+                    <td class="actions">
+                        <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
+                    </td>
+                </tr>
+                <tr>
+                <td>Nada</td>
+                    <td> PEDRO</td>
+                    <td>01/01/2015</td>
+                    <td class="actions">
+                        <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
+                    </td>
+                </tr>
                 <tr>
                 <td>Nada</td>
                     <td> PEDRO</td>
@@ -235,39 +285,6 @@
   </ul>
 </nav>
 
-<div class="col-md-12">
-  <div class="row">
-    <div class="col-xs-12">
-                    <div class="small-box bg-green">
-                <div class="inner">
-                  <h3 id="number-users" style="color:white;">0</h3>
-                  <p id="newuser" style="color:white;">Todos os Usuários</p>
-                </div>
-                <div class="icon">
-                  <i class="fas fa-user-plus"></i>
-                </div>
-      </div>
-    </div>
-    
-
-
-            <div class="col-xs-10">
-              <!-- small box -->
-              <div class="smal-box bg-yellow">
-                <div class="inner">
-                  <h3 id="number-users-admin" style="color:white;">1</h3>
-          
-                  <p style="color:white;">Administradores</p>
-                </div>
-                <div class="icon">
-                  <i class="fas fa-crown"></i>
-                </div>
-              </div>
-            </div>
-      </div>
-  </div>
-</div>
-      </div>
    
         
 
