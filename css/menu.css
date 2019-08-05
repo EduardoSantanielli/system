@@ -8,7 +8,7 @@ font-size: 14px;
 font-weight: 400;
 left: 0px;
 line-height: 20px;
-min-height: 100%;
+min-height: 125%;
 padding-top: 10px;
 position: absolute;
 text-size-adjust: 100%;
@@ -17,7 +17,7 @@ transition-delay: 0s;
 transition-duration: 0s;
 transition-property: none;
 transition-timing-function: ease;
-width: 200px;
+width: 205px;
 z-index: 810;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
@@ -68,6 +68,7 @@ span{
 #nave{
   background-color: #24292e;
     color:white;
+    width:105%;
 }
 .user-image {
   float: left;
@@ -95,11 +96,11 @@ span{
   margin-bottom:5px;
 }
 #list{
-  margin-left: 15%;
+  margin-left: 18%;
 }
 
 #bottom{
-  margin-left:16%;
+  margin-left:19%;
 }
 
 .smal-box {
@@ -109,7 +110,7 @@ span{
   margin-bottom: 20px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   background-color:orange;
-margin-left:25px;
+  margin-left:25px;
 }
 .smal-box > .inner {
   padding: 10px;
@@ -262,7 +263,7 @@ margin-left:25px;
   position: relative;
   display: block;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  margin-left:220px;
+  margin-left:500px;
   background-color:green;
 }
 .small-box > .inner {
