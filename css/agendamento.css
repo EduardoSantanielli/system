@@ -58,6 +58,7 @@
   #nave{
     background-color: #24292e;
       color:white;
+      width:105%;
   }
   .user-image {
     float: left;
