@@ -4,7 +4,7 @@
 </head>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/matricula.css">
+    <link rel="stylesheet" href="css/matricula.css?5456454">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
             <!-- Scripts -->
@@ -21,15 +21,17 @@
 
 <body>
 
-          <nav class="navbar navbar-expand-lg navbar-light" id="nave">
-          <a class="navbar-brand"  href="#" style="color:white;">Secretar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg fixed-top  bg-dark pmd-navbar pmd-z-depth nave" id="nave">
+    
+    <!-- Sidebar Toggle Button-->
+   
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-        <img src="img/avatar5.png" class="user-image" alt="User Image">
+        <img src="img/avatar5.png" class="user-image" alt="User Image" style="margin-left:1100px">
 
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,19 +51,19 @@
       </li>
                         
   </div>
+      
+    <!-- Navbar Right icon -->		
 </nav>
-<div class="Vertical">
-    <div class="col-md-12">
-       <div class="user-panel">
-       <div class="col-md-6">
-        </div>
-        </div>
-      </div>
-      <a class="navbar-brand" href="#" style="color:white;">Secretary Account</a>
-    <hr>
-        <center>
-        <strong><p style="color:gray;">Menu</p></strong>
-        </center>
+
+  <div id="wrapper">
+   <!-- Sidebar -->
+   <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+          <br>
+          <br>
+         <br>
+     
+        <strong><p style="color:gray; margin-left: 80px">Menu</p></strong>
         <ul class="navbarVertical">
             <li>
                  <a href="menu.php">
@@ -76,13 +78,13 @@
             </li>
             
             <li>
-                <a href="#">
-                <i class="fas fa-search"></i><span>Inserir Aluno</span>
+                <a href="inserir.php">
+                <i class="fas fa-search"></i><span>Tratamentos</span>
                 </a>
             </li>   
 
               <li>
-              <a href="horarios.php">
+                 <a href="horarios.php">
                     <i class="fas fa-clock"></i><span>Horários</span>
                 </a>
             </li>  
@@ -95,17 +97,12 @@
 
              <li>
                 <a href="#">
-                  <i class="fas fa-archive"></i> <span>Biblioteca</span>
+                  <i class="fas fa-archive"></i><span>Laudos</span>
                 </a>
             </li>               
 
-           <li>
-                 <a href="bot.php">
-                    <i class="fas fa-comments"></i><span>Bot</span>
-                </a>
-            </li> 
             <li>
-             <a href="agendamento.php">
+             <a href="agendamento.php" >
                  <i class="fas fa-calendar-alt"></i><span>Agendamentos</span>
             </a>
             </li>  
@@ -123,8 +120,12 @@
             </li>  
 
         </ul>
-        <!-- Button trigger modal -->
-</div>
+      </ul>
+   </div>
+   <!-- /#sidebar-wrapper -->
+        <br>
+        <br>
+  
 <div class="modal fade" id="cadastrar" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -161,31 +162,33 @@
     <br>
 
     <form action="#" method="post">
+    <center>
+            <h5>Matricular Aluno</h5>        
+            <hr />
          <div id="main" class="container-fluid">
-            <h3 class="page-header">Matricular Aluno</h3>        
-
+           
                 <form action="#" method="post">
                     <!-- area de campos do form -->
-            <hr />
+          
 
 
             <div class="row">
-                <div class="form-group col-md-7">
+                <div class="form-group col-md-9">
                     <label for="campo1">Nome Completo</label>
-                    <input type="text" class="form-control" id="campo1">
+                    <input type="text" class="form-control" id="campo1" placeholder="Ex: Pedro Emanoel do Nascimento Silva">
             </div>
                 
                 </div>
             
             <div class="row">
-                <div class="form-group col-md-2">
+                <div class="form-group col-md-3">
                     <label for="campo2">CPF</label>
-                    <input type="text" class="form-control" id="campo3">
+                    <input type="text" class="form-control" id="campo3" placeholder="XXXXXXXXXXX">
             </div>
             
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
                 <label for="campo3">Nascimento</label>
-                <input type="text" class="form-control" id="campo3">
+                <input type="date" class="form-control" id="campo3" placeholder="XX/XX/XXXX">
             </div>
 
             
@@ -210,7 +213,7 @@
 			</div>
     </div>
 
-  <div class="col-md-2" id="selecto"> 
+  <div class="col-md-4" id="selecto"> 
         <select class="form-control">
             <option>Sexo:</option>
             <option>Masculino</option>
@@ -221,14 +224,14 @@
   
 
             <div class="row">
-                <div class="form-group col-md-2">
+                <div class="form-group col-md-3">
                     <label for="campo2">Cidade</label>
-                    <input type="text" class="form-control" id="campo3">
+                    <input type="text" class="form-control" id="campo3" placeholder=" Ex: Mongaguá">
             </div>
             
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
                 <label for="campo3">Bairro</label>
-                <input type="text" class="form-control" id="campo3">
+                <input type="text" class="form-control" id="campo3" placeholder=" Ex: Cibratel">
             </div>
 
             
@@ -245,7 +248,7 @@
     </div>
         
     <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-5">
      <label for="telefone">Encaminhamento</label>
         <div class="input-group form-group">
                 <div class="input-group-prepend">
@@ -273,30 +276,33 @@
       </div>
     </div>
 
-<div id="main" class="container-fluid">
-            <h3 class="page-header">Responsável</h3>        
 
+    <center>
+        <hr>
+            <h3 class="page-header">Responsável</h3>        
+            <div id="main" class="container-fluid">
                 <form action="#" method="post">
                     <!-- area de campos do form -->
-            <hr />
+      <br>
 
 
-            <div class="row">
-                <div class="form-group col-md-7">
+      <div class="row">
+                <div class="form-group col-md-9">
                     <label for="campo1">Nome Completo</label>
-                    <input type="text" class="form-control" id="campo1">
+                    <input type="text" class="form-control" id="campo1" placeholder="Ex: Pedro Emanoel do Nascimento Silva">
             </div>
+                
                 </div>
             
             <div class="row">
-                <div class="form-group col-md-2">
+                <div class="form-group col-md-3">
                     <label for="campo2">CPF</label>
-                    <input type="text" class="form-control" id="campo3">
+                    <input type="text" class="form-control" id="campo3" placeholder="XXXXXXXXXXX">
             </div>
             
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
                 <label for="campo3">Nascimento</label>
-                <input type="text" class="form-control" id="campo3">
+                <input type="date" class="form-control" id="campo3" placeholder="XX/XX/XXXX">
             </div>
 
             
@@ -321,7 +327,7 @@
 			</div>
     </div>
 
-  <div class="col-md-2" id="selecto"> 
+  <div class="col-md-4" id="selecto"> 
         <select class="form-control">
             <option>Sexo:</option>
             <option>Masculino</option>
@@ -332,14 +338,14 @@
   
 
             <div class="row">
-                <div class="form-group col-md-2">
+                <div class="form-group col-md-3">
                     <label for="campo2">Cidade</label>
-                    <input type="text" class="form-control" id="campo3">
+                    <input type="text" class="form-control" id="campo3" placeholder=" Ex: Mongaguá">
             </div>
             
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
                 <label for="campo3">Bairro</label>
-                <input type="text" class="form-control" id="campo3">
+                <input type="text" class="form-control" id="campo3" placeholder=" Ex: Cibratel">
             </div>
 
             
@@ -356,8 +362,8 @@
     </div>
         
     <div class="row">
-    <div class="col-md-3">
-     <label for="telefone">Profissão</label>
+    <div class="col-md-5">
+     <label for="telefone">Emprego</label>
         <div class="input-group form-group">
                 <div class="input-group-prepend">
                    
@@ -383,15 +389,15 @@
     </div>
       </div>
     </div>
-
-    <div class="form-group">
-  <label class="col-md-2 control-label" for="Cadastrar"></label>
-  <div class="col-md-8">
-    <button id="Cadastrar" name="Cadastrar" class="btn btn-success" type="Submit">Cadastrar Aluno</button>
-    <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
-  </div>
+    <button class="btn btn-primary" type="submit">Finalizar Matricula</button>
+    <button class="btn btn-danger" type="submit">Cancelar Matricula</button>
+    
 </form>
-
+<br>
+    <br>
+<div class="col-md-6">
+        <h1></h1>
+    </div>
 
 </body>
 </html>

@@ -4,12 +4,13 @@
 </head>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/agendamento.css">
+    <link rel="stylesheet" href="css/agendamento.css?14229481259">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css";
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
             <!-- Scripts -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bot.js"></script>
     <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
     <script>
@@ -21,15 +22,17 @@
 
 <body>
 
-          <nav class="navbar navbar-expand-lg navbar-light" id="nave">
-          <a class="navbar-brand" href="#" style="color:white;">Secretary Account</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg fixed-top  bg-dark pmd-navbar pmd-z-depth nave" id="nave">
+    
+    <!-- Sidebar Toggle Button-->
+   
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-        <img src="img/avatar5.png" class="user-image" alt="User Image">
+        <img src="img/avatar5.png" class="user-image" alt="User Image" style="margin-left:1100px">
 
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,19 +52,19 @@
       </li>
                         
   </div>
+      
+    <!-- Navbar Right icon -->		
 </nav>
-    <div class="Vertical">
-    <div class="col-md-12">
-       <div class="user-panel">
-       <div class="col-md-6">
-        </div>
-        </div>
-      </div>
-      <a class="navbar-brand" href="#" style="color:white;">Secretary Account</a>
-    <hr>
-        <center>
-        <strong><p style="color:gray;">Menu</p></strong>
-        </center>
+
+  <div id="wrapper">
+   <!-- Sidebar -->
+   <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+          <br>
+          <br>
+         <br>
+     
+        <strong><p style="color:gray; margin-left: 80px">Menu</p></strong>
         <ul class="navbarVertical">
             <li>
                  <a href="menu.php">
@@ -76,8 +79,8 @@
             </li>
             
             <li>
-                <a href="#">
-                <i class="fas fa-search"></i><span>Inserir Aluno</span>
+                <a href="inserir.php">
+                <i class="fas fa-search"></i><span>Tratamentos</span>
                 </a>
             </li>   
 
@@ -95,15 +98,10 @@
 
              <li>
                 <a href="#">
-                  <i class="fas fa-archive"></i><span>Biblioteca</span>
+                  <i class="fas fa-archive"></i><span>Laudos</span>
                 </a>
             </li>               
 
-           <li>
-                 <a href="bot.php">
-                    <i class="fas fa-comments"></i><span>Bot</span>
-                </a>
-            </li> 
             <li>
              <a href="agendamento.php" >
                  <i class="fas fa-calendar-alt"></i><span>Agendamentos</span>
@@ -123,8 +121,17 @@
             </li>  
 
         </ul>
-        <!-- Button trigger modal -->
-</div>
+      </ul>
+   </div>
+   <!-- /#sidebar-wrapper -->
+
+
+
+      
+
+
+
+    
 
 <div class="modal fade" id="cadastrar" role="dialog">
   <div class="modal-dialog" role="document">
@@ -145,7 +152,7 @@
     </div>
   </div>
   </div>
-<!-- Modal de sair -->
+
 <div class="modal fade" id="deslogar" role="dialog">
         <div class="modal-dialog modal-md" style="width: 210px; text-align: center;"> 
             <div class="modal-content">
@@ -160,17 +167,13 @@
         </div>
     </div>
     <br>
+    <br>
+    <br>
     <center>
-      <h3 style="margin-left:1,2%; color:#212529;">Agendamento de Visitas</h3>
-    </center>
-    <hr>
-            <!-- Body -->
-            <div id="list" class="row">
-     
-      <br>
-     
-     
-      <div class="col-md-12">
+          <h5>Agendamento de Horários</h5> 
+        </center>
+
+    <div class="col-md-12">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="small-box" data-toggle="modal" data-target="#agendar">
@@ -182,17 +185,11 @@
                         <div class="icon">
                         <i class="fas fa-plus-circle"></i>
                     </div>
-
               </div>
-
+              <br>
     </div> 
-</div>
-<br>
-    </div>
-
-        <div class="table-responsive col-md-11">
-     <table class="table table-striped" id="usuarios">
-     <div class="col-md-6">
+    <div class="table-responsive col-md-12">
+    <div class="col-md-10">
         <div class="input-group h2">
             <input name="" class="form-control" id="search" type="text" placeholder="Pesquisar Agendamento">
             <span class="input-group-btn">
@@ -202,8 +199,14 @@
             </span>
         </div>
     </div>
-</div> <!-- /#top -->
+</div>
+      </div>
 
+        <div id="list" class="row">
+          <div class="col-md-12">
+     <table class="table table-striped" id="usuarios">
+  
+</div> <!-- /#top -->
          <thead>
              <tr>
                  <th>Nome Completo</th>
@@ -213,7 +216,6 @@
               </tr>
          </thead>
          <tbody>
-
              <tr>
                  <td> Patricia</td>
                  <td>24/04/2019</td>
@@ -250,7 +252,6 @@
                     </div>
                  </td>
              </tr>
-
              <tr>
                  <td> Patricia</td>
                  <td>24/04/2019</td>
@@ -263,7 +264,6 @@
                     </div>
                  </td>
              </tr>
-
              <tr>
                  <td> Patricia</td>
                  <td>24/04/2019</td>
@@ -276,11 +276,10 @@
                     </div>
                  </td>
              </tr>
-
          </tbody>
       </table>
-
   </div>
+      </div>
 </div> <!-- /#list -->
 <nav aria-label="Navegação de página exemplo" id="bottom">
 <ul class="pagination">
@@ -291,8 +290,6 @@
  <li class="page-item"><a class="page-link" href="#">Próximo</a></li>
 </ul>
 </nav>
-
-
 <div class="modal fade" id="agendar" tabindex="-1" role="dialog" >
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -332,5 +329,12 @@
 
 
    
+        
+
+    
+
+
+
+
 </body>
 </html>
