@@ -1,0 +1,11 @@
+
+
+ .container{
+     background-color:  darkcyan;
+     border-radius: 5%;
+ }
+
+ .jumbotron{
+     border-radius:5%;
+     background-color: white;
+ }
