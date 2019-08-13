@@ -72,8 +72,9 @@
                 </a>
             </li>
 
+            
             <li>
-                 <a href="#">
+                 <a href="#index.html">
                     <i class="fas fa-file-invoice"></i><span>Diários</span>
                 </a>
             </li>
